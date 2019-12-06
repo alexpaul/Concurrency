@@ -4,3 +4,5 @@ Introduction to Concurrency and Grand Central Dispatach in Swift. In this app we
 
 #### App allows the user to scroll concurrently while image is being loaded.
 ![concurrency-app](Assets/concurrency.png)
+
+## [Video Lecture](https://youtu.be/Qy40OXUMtmc)
