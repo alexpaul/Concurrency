@@ -29,6 +29,10 @@ class ViewController: UIViewController {
   }
   
   @IBAction func loadImage(_ sender: UIBarButtonItem) {
+    
+    // disable the load button so the user does not make multiple network requests
+    sender.isEnabled = false
+    
     guard let url = URL(string: imageURLString) else {
       fatalError("bad url \(imageURLString)")
     }
@@ -59,6 +63,7 @@ class ViewController: UIViewController {
         // now we need to update the UI
         DispatchQueue.main.async {
           self.planetImageView.image = image
+          sender.isEnabled = true // re-enable the load button
         }
       } catch {
         print("contents of error: \(error)")
