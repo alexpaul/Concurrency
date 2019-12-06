@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XXz-9z-UFa">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Astronomy Photo of the Day-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Concurrency" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="woC-xj-eHN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tct-uj-gjz" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ijl-7E-Ged">
+                                                <rect key="frame" x="0.0" y="1" width="414" height="297.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="vJh-BU-K1g"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkc-Hx-P2W">
+                                                <rect key="frame" x="20" y="308" width="374" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="fkc-Hx-P2W" secondAttribute="bottom" constant="471" id="2Aq-5b-EFV"/>
+                                            <constraint firstItem="ijl-7E-Ged" firstAttribute="top" secondItem="tct-uj-gjz" secondAttribute="top" id="93k-MT-I6t"/>
+                                            <constraint firstItem="fkc-Hx-P2W" firstAttribute="top" secondItem="ijl-7E-Ged" secondAttribute="bottom" constant="8" id="FE8-7w-iLl"/>
+                                            <constraint firstAttribute="trailing" secondItem="ijl-7E-Ged" secondAttribute="trailing" id="J4w-DB-fdy"/>
+                                            <constraint firstAttribute="trailing" secondItem="fkc-Hx-P2W" secondAttribute="trailing" constant="20" id="c3w-W2-xSn"/>
+                                            <constraint firstItem="ijl-7E-Ged" firstAttribute="leading" secondItem="tct-uj-gjz" secondAttribute="leading" id="fj2-jG-fCr"/>
+                                            <constraint firstItem="fkc-Hx-P2W" firstAttribute="leading" secondItem="tct-uj-gjz" secondAttribute="leading" constant="20" id="k8v-hq-IoN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tct-uj-gjz" secondAttribute="trailing" id="2mU-vL-qXr"/>
+                                    <constraint firstItem="tct-uj-gjz" firstAttribute="leading" secondItem="woC-xj-eHN" secondAttribute="leading" id="3nl-p8-Ms2"/>
+                                    <constraint firstItem="tct-uj-gjz" firstAttribute="height" secondItem="woC-xj-eHN" secondAttribute="height" priority="750" id="7er-Ds-SAv"/>
+                                    <constraint firstItem="tct-uj-gjz" firstAttribute="top" secondItem="woC-xj-eHN" secondAttribute="top" id="f44-iA-oGs"/>
+                                    <constraint firstAttribute="bottom" secondItem="tct-uj-gjz" secondAttribute="bottom" id="hmR-HH-FN2"/>
+                                    <constraint firstItem="tct-uj-gjz" firstAttribute="width" secondItem="woC-xj-eHN" secondAttribute="width" id="oTT-Lc-ITi"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="5u6-IB-kKa"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pqS-XN-mJr"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="woC-xj-eHN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="A5L-DJ-9hn"/>
+                            <constraint firstItem="woC-xj-eHN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UaV-hb-d1f"/>
+                            <constraint firstItem="woC-xj-eHN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V2A-w5-ytY"/>
+                            <constraint firstAttribute="bottom" secondItem="woC-xj-eHN" secondAttribute="bottom" id="bSZ-sg-akP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Astronomy Photo of the Day" id="avx-Jf-URm">
+                        <barButtonItem key="rightBarButtonItem" title="Load Image" id="kb3-JB-PTD">
+                            <connections>
+                                <action selector="loadImage:" destination="BYZ-38-t0r" id="WBV-Hq-4xC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="explanationLabel" destination="fkc-Hx-P2W" id="Djz-ei-idM"/>
+                        <outlet property="planetImageView" destination="ijl-7E-Ged" id="3qx-3J-NvI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gWv-XH-g7Y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XXz-9z-UFa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uA9-ps-bil">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4Fi-Vu-oyv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mUf-MA-MYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.fill" catalog="system" width="64" height="46"/>
+    </resources>
+</document>
